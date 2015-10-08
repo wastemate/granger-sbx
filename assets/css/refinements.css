@@ -36,7 +36,7 @@
 #first-pickup-date-text, #wma-rolloff-dropoff-date-text, #wma-rolloff-pickup-date-text {
   padding: 10px;
   font-size: 17px;
-  color: #702e79;
+  color: #5a1000;
   background-color: #FFFFFF;
   border: 1px solid #DDDDDD;
 }
@@ -55,7 +55,7 @@
 }
 
 .bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
-  background-color: #702e79;
+  background-color: #5a1000;
   border-radius: 0;
 }
 
@@ -70,8 +70,8 @@
 }
 
 .day:not( .disabled ):not( .new ):not( .old ) {
-  border: 2px solid #702e79;
-  border: 2px solid #702e79;
+  border: 2px solid #5a1000;
+  border: 2px solid #5a1000;
 }
 
 .day.old.disabled, .day.new.disabled, .day.old, .day.new {
@@ -137,7 +137,7 @@ label[for='wma-cst-expdate'], label[for='wma-cst-cvv'] {
 }
 
 #wma-btn-change-address, .wma-billing__service-category > span {
-  color: #702e79;
+  color: #5a1000;
   text-decoration: underline;
   font-size: 12px !important;
   cursor: pointer;
@@ -191,7 +191,7 @@ input[type=checkbox] + label:before {
 
 input[type=checkbox]:checked + label:before {
   content:"×";
-  color: #702e79;
+  color: #5a1000;
   text-align:center;
   line-height:18px;
   text-shadow:0px 0px 3px #eee;
@@ -256,7 +256,7 @@ img.greyscale:hover {
 }
 
 .wma-total-recurring-monthly {
-  color: #702e79;
+  color: #5a1000;
 }
 
 label:before {
@@ -315,7 +315,7 @@ h4 > em {
 }
 
 .wma-products__title {
-  color: #0B81C5 !important;
+  color: #5a1000 !important;
 }
 
 .wma-product__top_desc {
@@ -339,7 +339,7 @@ h4 > em {
 
 .wma-base__light-border.wma-product__desc.custom_product_desc {
   border: none !important;
-  color: #58595B !important;
+  color: #d2af9b !important;
   width: 100% !important;
   padding: 0 !important;
 }
@@ -353,7 +353,7 @@ h4 > em {
 .wma-product__btn-diff-size {
   width: 100%;
   text-align: center;
-  color: #0B81C5;
+  color: #00b294;
   font-weight: bold;
   text-decoration: underline;
   font-size: 15px;
@@ -364,7 +364,7 @@ h4 > em {
   margin: 0px auto !important;
   width: 140px;
   height: 40px;
-  background-color: #0B81C5;
+  background-color: #00b294;
   color: #fff !important;
   font-weight: bold !important;
   border: none;
@@ -409,11 +409,11 @@ h4 > em {
 
 /* blue nav */
 #wma-app .wma-process__nav ul li.wma-nav__active .wma-process__nav-count, #wma-app .wma-process__nav ul li.wma-nav__completed .wma-process__nav-count {
-  background-color: #0B81C5 !important;
+  background-color: #00b294 !important;
 }
 
 #wma-app .wma-process__nav ul li.wma-nav__active .wma-process__nav-desc, #wma-app .wma-process__nav ul li.wma-nav__completed .wma-process__nav-desc {
-  color: #0B81C5 !important;
+  color: #00b294 !important;
 }
 
 /*--------------*/
