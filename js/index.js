@@ -1,11 +1,12 @@
 var wma_viewModel;
 $(document).ready(function () {
+  Parse.serverURL = "https://grngr-wastemate-parse.herokuapp.com/parse";
   //6RvJ4eHRqgagOYjVYBrF9IzBc4czbXt7NplOqmDU
   //6YJjl9Tlu9gml6IR0YfXrOIkY9SxqCfP2bshQELI
   var appKey = '6RvJ4eHRqgagOYjVYBrF9IzBc4czbXt7NplOqmDU';
   //xntysKgobBDGPDz1LOHsPwByZ6DkRS8mY3I9sfxK
   //DEIXEICevT5qkR1zQxvj8PVHrvWu4XPKN2QUhhmL
-  var jsKey = 'xntysKgobBDGPDz1LOHsPwByZ6DkRS8mY3I9sfxK';
+  var jsKey = '';
   wma_viewModel = new viewModel();
   ko.applyBindings(wma_viewModel);
   wastemate.initialize(appKey, jsKey).then(function (categories) {
