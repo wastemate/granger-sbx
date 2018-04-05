@@ -716,7 +716,7 @@
           <!-- Configure WasteMate -->
           <script type="text/javascript">
               Parse.serverURL = "https://grngr-wastemate-parse.herokuapp.com/parse";
-              var _wastemate = _wastemate || {'ui': {}, 'user': {}};
+              var _wastemate = _wastemate || {'ui': {}, 'user': {}, 'site': {}};
               _wastemate['APP_KEY']= '6RvJ4eHRqgagOYjVYBrF9IzBc4czbXt7NplOqmDU';
               _wastemate['JS_KEY'] = '';
               _wastemate['REQUIRE_CC'] = false;           //Default: true
@@ -727,6 +727,7 @@
               _wastemate['ui']['main'] = 'street_address';           //Default: 'wastemate-ordering'
               _wastemate['ui']['hide'] = 'body'; //Default: 'body'
               _wastemate['ui']['error_phone'] = '(805) 238-2381';
+              _wastemate['site']['baseUrl'] = '';
               _wastemate['search_bounds'] = {latTop: 33.404443, lonLeft:-117.624034, latBottom: 32.585488, lonRight: -116.236613};
           </script>
           <!-- Load WasteMate -->
