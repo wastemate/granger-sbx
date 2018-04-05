@@ -428,9 +428,29 @@ function viewModel() {
       token: 'pk.eyJ1IjoiamVkZGF3c29uIiwiYSI6ImMxYjczZWRkNzFkNWU3YzhmMTAyNzdjMjBlYThiODk2In0.HsgA69IWdvwYJyaCT7TUUg'
     });
   });
+
+  self.loadServiceMatrix = function(data, event){
+    //Get the API key, then call
+    //https://webcoreapi-central-test.azurewebsites.net/api/Location/VerifyAddress?addressNumber=700&streetName=Lincoln%20Ave&city=Lansing
+
+  };
+
   self.loadCategory = function (data, event) {
     console.log('Clicked');
     console.log(data);
+
+    //Call new endpoint -> use the matrix!!
+    encore.verifyLocation().then(function(services){
+      if(services == null){
+        //API wasn't able to provide a high confidence match for this address, just get the basic customer info and submit it.
+        return;
+      }
+
+      //Got a match and should have the service day and pricing!
+      console.log(services);
+    });
+
+
     wastemate.getServices(data.line).then(function (services) {
       if (services.length == 0) {
         self.noServiceSelection(true);
@@ -961,7 +981,9 @@ function viewModel() {
         if (!self.wantsAutopay() && !self.isOneTimePrice()) {
             amount = amount * 2;
         }
-        amount = ~~(parseFloat(amount) * 100);
+        //TODO: replace with actual amount when not testing
+        //Testing set the amount to 0.01
+        amount = 1;//~~(parseFloat(amount) * 100);
         wastemate.preAuthorizePayment(amount, cardInfo).then(function(preauth){
           wastemate._private.order.set('amount', amount);
           wastemate._private.order.set('delayedCaptureToken', preauth.creditCardToken);
